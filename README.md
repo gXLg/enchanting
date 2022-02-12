@@ -1,2 +1,2 @@
 # enchanting
-Calculator for the best enchanting order for minecraft
+Calculator for the best enchanting order in minecraft
