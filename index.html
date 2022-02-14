@@ -19,6 +19,9 @@
         color: #dddddd;
         font-size: 18px;
       }
+      .hide {
+        display: none;
+      }
       #result {
         font-size: 10px;
         border-collapse: collapse;
@@ -74,13 +77,14 @@
         <option value="shield">Shield</option>
       </optgroup>
     </select><br>
+    <br>
     <table id="ench"></table>
-
     <br>
     <input type="button" id="makeBtn" value="count">
+    <input type="button" id="toggleLogs" value="logs">
     <br>
     <br>
-    <textarea id="log" cols="100" rows="100" readonly></textarea>
+    <textarea class="hide" id="log" cols="100" rows="100" readonly></textarea>
     <table id="result"></table>
   </body>
 </html>

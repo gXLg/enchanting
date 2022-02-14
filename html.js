@@ -395,6 +395,11 @@ window.onload = () => {
 
   select = document.getElementById("item");
   select.onchange = () => { change(); };
+
+  const togBtn = document.getElementById("toggleLogs");
+  togBtn.onclick = () => {
+    logs.classList.toggle("hide");
+  };
 }
 
 function change(){
@@ -463,6 +468,8 @@ function make(){
 
   if(Object.keys(magic).length == 0) return;
 
+  const start = new Date();
+  log("Searching for enchantments...");
   const enchants = [];
   for(let enchant in magic){
     const enchantment = enchantments.filter(
@@ -471,7 +478,10 @@ function make(){
 
     let level = "";
     let lvl = magic[enchant];
-    if(enchantment.max != 1) level = " " + (roman(lvl) ?? lvl);
+    if(enchantment.max != 1)
+      level = " " + (roman(lvl) ?? lvl);
+
+    log("Found", enchantment.name + level);
 
     if((lvl > enchantment.max) || (lvl < 1)){
       log("Level not in allowed range");
@@ -498,21 +508,37 @@ function make(){
     const count = filter.length;
     if(count >= 2){
       log(
-        "Enchantments conflict:", filter.join(", ")
+        "Enchantments conflict found:", filter.join(", ")
       );
       conflict = true;
     }
   }
   if(conflict) return;
+  log("No conflicts found");
 
+  log("Searching for optimal binary tree...");
   const data = structures[enchants.length];
+  log("Found tree with weights", data.weight.join(" "));
   if("when" in data){
-    if(Math.min(...enchants.map(e => e.value)) > data.when)
+    log("Found alternative")
+    if(
+      Math.min(...enchants.map(e => e.value)) > data.when
+    ){
       data = data.then;
+      log(
+        "Alternative applied, new weights:",
+        data.weight.join(" ")
+      );
+    } else {
+      log("Alternative not matching");
+    }
   }
   const tree = data.data;
   const sorted = enchants.sort((a, b) => a.value - b.value);
 
+  log("Working with enchant costs", enchants.map(e => e.value).join(" "));
+
+  log("Counting using collected data...");
   let cost = 0;
   tree[tree.length - 1][0] = [item, [], 0, 0];
   for(let i in sorted){
@@ -526,6 +552,7 @@ function make(){
   log("Prior work penalty:", data.penalty);
   log("Total cost:", cost + data.penalty);
 
+  log("Generating output...");
   function printTree(level, index){
     if(
       ((level + 1) in tree) &&
@@ -568,20 +595,48 @@ function make(){
       xpEl.appendChild(xpImg);
       xpEl.innerHTML += "<br>";
       const xpTxt = document.createElement("span");
-      xpTxt.innerHTML = cost + " Levels";
+      xpTxt.innerHTML = cost + " levels";
       xpEl.appendChild(xpTxt);
       row.appendChild(xpEl);
 
       result.appendChild(row);
-
-      //log(left + "+" + right);
 
       return middle;
     } else {
       return tree[level][index];
     }
   }
-  printTree(0, 0);
-  //log("Do:", printTree(0, 0));
+  const last = printTree(0, 0);
 
+  const row = document.createElement("tr");
+
+  const leftEl = document.createElement("td");
+  const leftTxt = document.createElement("span");
+  leftTxt.innerHTML = "Result";
+  leftEl.appendChild(leftTxt);
+  row.appendChild(leftEl);
+
+  const rightEl = document.createElement("td");
+  const rightImg = document.createElement("img");
+  rightImg.src = "images/" + last[0] + ".gif";
+  rightEl.appendChild(rightImg);
+  rightEl.innerHTML += "<br>";
+  const rightTxt = document.createElement("span");
+  rightTxt.innerHTML = last[1].join("<br>");
+  rightEl.appendChild(rightTxt);
+  row.appendChild(rightEl);
+
+  const xpEl = document.createElement("td");
+  const xpImg = document.createElement("img");
+  xpImg.src = "images/xp.gif";
+  xpEl.appendChild(xpImg);
+  xpEl.innerHTML += "<br>";
+  const xpTxt = document.createElement("span");
+  xpTxt.innerHTML = cost + data.penalty + " levels";
+  xpEl.appendChild(xpTxt);
+  row.appendChild(xpEl);
+
+  result.appendChild(row);
+
+  log("Done in", new Date() - start, "miliseconds");
 }
