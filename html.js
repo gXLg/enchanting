@@ -494,7 +494,7 @@ function make(){
     }
 
     enchants.push({
-      "e" : enchant + level,
+      "e": enchant + level,
       "value": enchantment.book * lvl
     });
 
@@ -517,7 +517,7 @@ function make(){
   log("No conflicts found");
 
   log("Searching for optimal binary tree...");
-  const data = structures[enchants.length];
+  let data = structures[enchants.length];
   log("Found tree with weights", data.weight.join(" "));
   if("when" in data){
     log("Found alternative")
