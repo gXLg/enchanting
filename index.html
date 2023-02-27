@@ -19,6 +19,7 @@
         color: #dddddd;
         font-size: 18px;
         overflow: scroll;
+        padding: 5%;
       }
       .r {
         color: #ff5555;
@@ -54,7 +55,7 @@
   </head>
   <body>
     <br>
-    <label for="item" id="label">Choose an item:</label>
+    <span>Choose an item:</span>
     <select name="item" id="item">
       <optgroup label="Armour">
         <option value="helmet">Helmet</option>
@@ -88,7 +89,7 @@
     <input type="button" id="toggleLogs" value="logs">
     <br>
     <br>
-    <div id="log"></div>
+    <div id="log" class="hide"></div>
     <table id="result"></table>
   </body>
 </html>
