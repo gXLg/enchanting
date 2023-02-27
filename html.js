@@ -385,7 +385,12 @@ function msg(error, ...entries){
 function log(...entries){
   msg(false, ...entries);
 }
+let errored = false;
 function error(...entries){
+  if(!errored){
+    alert("An error occured, check the logs");
+    errored = true;
+  }
   msg(true, ...entries);
 }
 
@@ -471,8 +476,9 @@ function click(name, i, max){
 
 function make(){
 
-  logs.value = "";
+  logs.innerHTML = "";
   result.innerHTML = "";
+  errored = false;
 
   if(Object.keys(magic).length == 0) return;
 
@@ -492,12 +498,12 @@ function make(){
     log("Found", enchantment.name + level);
 
     if((lvl > enchantment.max) || (lvl < 1)){
-      log("Level not in allowed range");
+      error("Level not in allowed range");
       return;
     }
 
     if(!enchantment.on.includes(item)){
-      log("Not available for this item");
+      error("Not available for this item");
       return;
     }
 
@@ -515,7 +521,7 @@ function make(){
     );
     const count = filter.length;
     if(count >= 2){
-      log(
+      error(
         "Enchantments conflict found:", filter.join(", ")
       );
       conflict = true;
