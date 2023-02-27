@@ -372,14 +372,17 @@ const structures = {
 
 let logs;
 function msg(error, ...entries){
-  if(error) logs.innerHTML += "<span class=r>";
-  logs.innerHTML += entries.map(e => {
+  let tx = "";
+  if(error) tx += "<span class=r>";
+  tx += entries.map(e => {
     if((typeof e === "object") && (e !== null))
       return JSON.stringify(e);
     else
       return e;
-  }).join(" ") + "\n";
-  if(error) logs.innerHTML += "</span>";
+  }).join(" ");
+  if(error) tx += "</span>";
+  tx += "<br>";
+  logs.innerHTML += tx;
   logs.scrollTop = logs.scrollHeight;
 }
 function log(...entries){
