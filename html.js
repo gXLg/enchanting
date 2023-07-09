@@ -416,7 +416,8 @@ window.onload = () => {
 
   select = document.getElementById("item");
   select.onchange = () => { change(); };
-
+  select.selectedIndex = -1;
+  
   const togBtn = document.getElementById("toggleLogs");
   togBtn.onclick = () => {
     logs.classList.toggle("hide");
