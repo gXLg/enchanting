@@ -1,91 +1,91 @@
 const enchantments = [
   {
-    "id": 0, "name": "Protection",
+    "name": "Protection",
     "on": ["helmet", "chestplate", "leggings", "boots"],
     "max": 4, "book": 1, "item": 1
   },
   {
-    "id": 1, "name": "Fire Protection",
+    "name": "Fire Protection",
     "on": ["helmet", "chestplate", "leggings", "boots"],
     "max": 4, "book": 1, "item": 2
   },
   {
-    "id": 2, "name": "Feather Falling",
+    "name": "Feather Falling",
     "on": ["boots"],
     "max": 4, "book": 1, "item": 2
   },
   {
-    "id": 3, "name": "Blast Protection",
+    "name": "Blast Protection",
     "on": ["helmet", "chestplate", "leggings", "boots"],
     "max": 4, "book": 2, "item": 4
   },
   {
-    "id": 4, "name": "Projectile Protection",
+    "name": "Projectile Protection",
     "on": ["helmet", "chestplate", "leggings", "boots"],
     "max": 4, "book": 1, "item": 2
   },
   {
-    "id": 5, "name": "Thorns",
+    "name": "Thorns",
     "on": ["helmet", "chestplate", "leggings", "boots"],
     "max": 3, "book": 4, "item": 8
   },
   {
-    "id": 6, "name": "Respiration",
+    "name": "Respiration",
     "on": ["helmet"],
     "max": 3, "book": 2, "item": 4
   },
   {
-    "id": 7, "name": "Depth Strider",
+    "name": "Depth Strider",
     "on": ["boots"],
     "max": 3, "book": 2, "item": 4
   },
   {
-    "id": 8, "name": "Aqua Affinity",
+    "name": "Aqua Affinity",
     "on": ["helmet"],
     "max": 1, "book": 2, "item": 4
   },
   {
-    "id": 9, "name": "Sharpness",
+    "name": "Sharpness",
     "on": ["sword", "axe"],
     "max": 5, "book": 1, "item": 1
   },
   {
-    "id": 10, "name": "Smite",
+    "name": "Smite",
     "on": ["sword", "axe"],
     "max": 5, "book": 1, "item": 2
   },
   {
-    "id": 11, "name": "Bane of Arthropods",
+    "name": "Bane of Arthropods",
     "on": ["sword", "axe"],
     "max": 5, "book": 1, "item": 2
   },
   {
-    "id": 12, "name": "Knockback",
+    "name": "Knockback",
     "on": ["sword"],
     "max": 2, "book": 1, "item": 2
   },
   {
-    "id": 13, "name": "Fire Aspect",
+    "name": "Fire Aspect",
     "on": ["sword"],
     "max": 2, "book": 2, "item": 4
   },
   {
-    "id": 14, "name": "Looting",
+    "name": "Looting",
     "on": ["sword"],
     "max": 3, "book": 2, "item": 4
   },
   {
-    "id": 15, "name": "Efficiency",
+    "name": "Efficiency",
     "on": ["axe", "shovel", "hoe", "pickaxe", "shears"],
     "max": 5, "book": 1, "item": 1
   },
   {
-    "id": 16, "name": "Silk Touch",
+    "name": "Silk Touch",
     "on": ["axe", "shovel", "hoe", "pickaxe"],
     "max": 1, "book": 4, "item": 8
   },
   {
-    "id": 17, "name": "Unbreaking",
+    "name": "Unbreaking",
     "on": ["sword", "axe", "shovel", "hoe", "pickaxe",
            "shears",
            "helmet", "chestplate", "leggings", "boots",
@@ -94,47 +94,47 @@ const enchantments = [
     "max": 3, "book": 1, "item": 2
   },
   {
-    "id": 18, "name": "Fortune",
+    "name": "Fortune",
     "on": ["axe", "shovel", "hoe", "pickaxe"],
     "max": 3, "book": 2, "item": 4
   },
   {
-    "id": 19, "name": "Power",
+    "name": "Power",
     "on": ["bow"],
     "max": 5, "book": 1, "item": 1
   },
   {
-    "id": 20, "name": "Punch",
+    "name": "Punch",
     "on": ["bow"],
     "max": 2, "book": 2, "item": 4
   },
   {
-    "id": 21, "name": "Flame",
+    "name": "Flame",
     "on": ["bow"],
     "max": 1, "book": 2, "item": 4
   },
   {
-    "id": 22, "name": "Infinity",
+    "name": "Infinity",
     "on": ["bow"],
     "max": 1, "book": 4, "item": 8
   },
   {
-    "id": 23, "name": "Luck of the Sea",
+    "name": "Luck of the Sea",
     "on": ["rod"],
     "max": 3, "book": 2, "item": 4
   },
   {
-    "id": 24, "name": "Lure",
+    "name": "Lure",
     "on": ["rod"],
     "max": 3, "book": 2, "item": 4
   },
   {
-    "id": 25, "name": "Frost Walker",
+    "name": "Frost Walker",
     "on": ["boots"],
     "max": 2, "book": 2, "item": 4
   },
   {
-    "id": 26, "name": "Mending",
+    "name": "Mending",
     "on": ["sword", "axe", "shovel", "hoe", "pickaxe",
            "shears",
            "helmet", "chestplate", "leggings", "boots",
@@ -143,12 +143,12 @@ const enchantments = [
     "max": 1, "book": 2, "item": 4
   },
   {
-    "id": 27, "name": "Curse of Binding",
+    "name": "Curse of Binding",
     "on": ["helmet", "chestplate", "leggings", "boots", "elytra"],
     "max": 1, "book": 4, "item": 8
   },
   {
-    "id": 28, "name": "Curse of Vanishing",
+    "name": "Curse of Vanishing",
     "on": ["sword", "axe", "shovel", "hoe", "pickaxe",
            "shears",
            "helmet", "chestplate", "leggings", "boots",
@@ -157,49 +157,54 @@ const enchantments = [
     "max": 1, "book": 4, "item": 8
   },
   {
-    "id": 29, "name": "Impaling",
+    "name": "Impaling",
     "on": ["trident"],
     "max": 5, "book": 2, "item": 4
   },
   {
-    "id": 30, "name": "Riptide",
+    "name": "Riptide",
     "on": ["trident"],
     "max": 3, "book": 2, "item": 4
   },
   {
-    "id": 31, "name": "Loyalty",
+    "name": "Loyalty",
     "on": ["trident"],
     "max": 3, "book": 1, "item": 1
   },
   {
-    "id": 32, "name": "Channeling",
+    "name": "Channeling",
     "on": ["trident"],
     "max": 1, "book": 4, "item": 8
   },
   {
-    "id": 33, "name": "Multishot",
+    "name": "Multishot",
     "on": ["crossbow"],
     "max": 1, "book": 2, "item": 4
   },
   {
-    "id": 34, "name": "Piercing",
+    "name": "Piercing",
     "on": ["crossbow"],
     "max": 4, "book": 1, "item": 1
   },
   {
-    "id": 35, "name": "Quick Charge",
+    "name": "Quick Charge",
     "on": ["crossbow"],
     "max": 3, "book": 1, "item": 2
   },
   {
-    "id": 36, "name": "Soul Speed",
+    "name": "Soul Speed",
     "on": ["boots"],
     "max": 3, "book": 4, "item": 8
   },
   {
-    "id": null, "name": "Sweeping Edge",
+    "name": "Sweeping Edge",
     "on": ["sword"],
     "max": 3, "book": 2, "item": 4
+  },
+  {
+    "name": "Swift Sneak",
+    "on": ["leggings"],
+    "max": 3, "book": 4, "item": 8
   }
 ];
 const groups = [
