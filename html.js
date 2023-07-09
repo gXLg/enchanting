@@ -421,6 +421,8 @@ window.onload = () => {
   togBtn.onclick = () => {
     logs.classList.toggle("hide");
   };
+
+  change();
 }
 
 function change(){
