@@ -400,21 +400,21 @@ function compute_internal(node) {
   if (node.leaf) return [0, 0];
   const [dl, cl] = compute_internal(node.left);
   const [dr, cr] = compute_internal(node.right);
-  return [Math.max(dl, dr) + 1, cl + cr + (2 ** dl - 1) + (2 ** dr - 1)]
+  return [Math.max(dl, dr) + 1, cl + cr + repairCost(dl) + repairCost(dr)];
 }
 
 function total_cost(shape, numbers) {
   const tree = build_tree(shape);
   const factors = collect_leafs(tree);
-  factors.sort();
+  factors.sort((a, b) => a - b);
   const num = [...numbers];
-  num.sort();
+  num.sort((a, b) => b - a);
   let leaf_cost = 0;
   for (let i = 0; i < numbers.length; i++) {
-    leaf_cost += factors[i] * num[numbers.length - i - 1];
+    leaf_cost += factors[i] * num[i];
   }
   const [_, internal] = compute_internal(tree);
-  return leaf_cost + internal
+  return leaf_cost + internal;
 }
 
 function find_tree(numbers) {
@@ -508,6 +508,7 @@ function make() {
       if (e == 100) {
         node.item = item;
       } else {
+        node.item = "book";
         node.ench.push(e);
       }
     } else {
@@ -527,7 +528,7 @@ function make() {
     const lc = print_tree(node.left);
     const rc = print_tree(node.right);
 
-    const cost = repairCost(lc) + repairCost(rc) + node.right.ench.reduce((a, b) => a.value + b.value, 0);
+    const cost = repairCost(lc) + repairCost(rc) + node.right.ench.reduce((a, b) => a.value + b.value);
     
     const row = document.createElement("tr");
 
@@ -535,7 +536,7 @@ function make() {
     leftEl.appendChild(pic(node.left));
     leftEl.innerHTML += "<br>";
     const leftTxt = document.createElement("span");
-    leftTxt.innerHTML = node.left.ench.join("<br>");
+    leftTxt.innerHTML = node.left.ench.map(e => e.e).join("<br>");
     leftEl.appendChild(leftTxt);
     row.appendChild(leftEl);
 
@@ -543,7 +544,7 @@ function make() {
     rightEl.appendChild(pic(node.right));
     rightEl.innerHTML += "<br>";
     const rightTxt = document.createElement("span");
-    rightTxt.innerHTML = node.right.ench.join("<br>");
+    rightTxt.innerHTML = node.right.ench.map(e => e.e).join("<br>");
     rightEl.appendChild(rightTxt);
     row.appendChild(rightEl);
 
@@ -575,7 +576,7 @@ function make() {
   rightEl.appendChild(pic(tree));
   rightEl.innerHTML += "<br>";
   const rightTxt = document.createElement("span");
-  rightTxt.innerHTML = tree.ench.join("<br>");
+  rightTxt.innerHTML = tree.ench.map(e => e.e).join("<br>");
   rightEl.appendChild(rightTxt);
   row.appendChild(rightEl);
 
