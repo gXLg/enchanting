@@ -374,6 +374,7 @@ function gen_shapes(n) {
       }
     }
   }
+  return shapes;
 }
 
 function build_tree(shape) {
@@ -428,6 +429,16 @@ function find_tree(numbers) {
     }
   }
   return [best_cost, build_tree(best_shape)]
+}
+
+function pic(node) {
+  const img = document.createElement("img");
+  if (node.item == "book") {
+    img.src = "images/book.gif";
+  } else {
+    img.src = "images/" + (node.ench.length ? "e_" : "") + node.item + ".gif";
+  }
+  return img;
 }
 
 function make() {
@@ -525,9 +536,7 @@ function make() {
     const row = document.createElement("tr");
 
     const leftEl = document.createElement("td");
-    const leftImg = document.createElement("img");
-    leftImg.src = "images/" + node.left.item + ".gif";
-    leftEl.appendChild(leftImg);
+    leftEl.appendChild(pic(node.left));
     leftEl.innerHTML += "<br>";
     const leftTxt = document.createElement("span");
     leftTxt.innerHTML = node.left.ench("<br>");
@@ -535,9 +544,7 @@ function make() {
     row.appendChild(leftEl);
 
     const rightEl = document.createElement("td");
-    const rightImg = document.createElement("img");
-    rightImg.src = "images/" + node.right.item + ".gif";
-    rightEl.appendChild(rightImg);
+    rightEl.appendChild(pic(node.right));
     rightEl.innerHTML += "<br>";
     const rightTxt = document.createElement("span");
     rightTxt.innerHTML = node.right.ench.join("<br>");
@@ -550,7 +557,7 @@ function make() {
     xpEl.appendChild(xpImg);
     xpEl.innerHTML += "<br>";
     const xpTxt = document.createElement("span");
-    xpTxt.innerHTML = cost + " levels";
+    xpTxt.innerHTML = cost + " level" + (cost == 1 ? "" : "s");
     xpEl.appendChild(xpTxt);
     row.appendChild(xpEl);
 
@@ -569,9 +576,7 @@ function make() {
   row.appendChild(leftEl);
 
   const rightEl = document.createElement("td");
-  const rightImg = document.createElement("img");
-  rightImg.src = "images/" + tree.item + ".gif";
-  rightEl.appendChild(rightImg);
+  rightEl.appendChild(pic(tree));
   rightEl.innerHTML += "<br>";
   const rightTxt = document.createElement("span");
   rightTxt.innerHTML = tree.ench.join("<br>");
@@ -584,7 +589,7 @@ function make() {
   xpEl.appendChild(xpImg);
   xpEl.innerHTML += "<br>";
   const xpTxt = document.createElement("span");
-  xpTxt.innerHTML = tcost + " levels";
+  xpTxt.innerHTML = tcost + " level" + (tcost == 1 ? "" : "s");
   xpEl.appendChild(xpTxt);
   row.appendChild(xpEl);
 
