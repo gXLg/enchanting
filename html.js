@@ -51,12 +51,12 @@ const enchantments = [
   },
   {
     "name": "Smite",
-    "on": ["sword", "axe"],
+    "on": ["sword", "axe", "mace"],
     "max": 5, "book": 1
   },
   {
     "name": "Bane of Arthropods",
-    "on": ["sword", "axe"],
+    "on": ["sword", "axe", "mace"],
     "max": 5, "book": 1
   },
   {
@@ -66,7 +66,7 @@ const enchantments = [
   },
   {
     "name": "Fire Aspect",
-    "on": ["sword"],
+    "on": ["sword", "mace"],
     "max": 2, "book": 2
   },
   {
@@ -90,7 +90,7 @@ const enchantments = [
            "shears",
            "helmet", "chestplate", "leggings", "boots",
            "bow", "crossbow", "trident", "shield",
-           "elytra", "rod"],
+           "elytra", "rod", "mace"],
     "max": 3, "book": 1
   },
   {
@@ -139,7 +139,7 @@ const enchantments = [
            "shears",
            "helmet", "chestplate", "leggings", "boots",
            "bow", "crossbow", "trident", "shield",
-           "elytra", "rod"],
+           "elytra", "rod", "mace"],
     "max": 1, "book": 2
   },
   {
@@ -153,7 +153,7 @@ const enchantments = [
            "shears",
            "helmet", "chestplate", "leggings", "boots",
            "bow", "crossbow", "trident", "shield",
-           "elytra", "rod"],
+           "elytra", "rod", "mace"],
     "max": 1, "book": 4
   },
   {
@@ -205,6 +205,21 @@ const enchantments = [
     "name": "Swift Sneak",
     "on": ["leggings"],
     "max": 3, "book": 4
+  },
+  {
+    "name": "Wind Burst",
+    "on": ["mace"],
+    "max": 3, "book": 2
+  },
+  {
+    "name": "Density",
+    "on": ["mace"],
+    "max": 5, "book": 1
+  },
+  {
+    "name": "Breach",
+    "on": ["mace"],
+    "max": 4, "book": 2
   }
 ];
 const groups = [
@@ -217,7 +232,7 @@ const groups = [
   ["Loyalty", "Riptide"],
   ["Channeling", "Riptide"],
   ["Silk Touch", "Looting"],
-  ["Silk Touch", "Luck of the Sea"]
+  ["Silk Touch", "Luck of the Sea"],
 ];
 
 function repairCost(anvilUses){
@@ -405,7 +420,7 @@ function find_tree(numbers) {
   const N = numbers.length;
   let best_cost = Infinity;
   let best_shape = null;
-  for (const shape of generate_shapes(N)) {
+  for (const shape of gen_shapes(N)) {
     const cost = total_cost(shape, numbers);
     if (cost < best_cost) {
       best_cost = cost;
