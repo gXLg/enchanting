@@ -433,11 +433,7 @@ function find_tree(numbers) {
 
 function pic(node) {
   const img = document.createElement("img");
-  if (node.item == "book") {
-    img.src = "images/book.gif";
-  } else {
-    img.src = "images/" + (node.ench.length ? "e_" : "") + node.item + ".gif";
-  }
+  img.src = "images/" + node.item + ".gif";
   return img;
 }
 
@@ -539,7 +535,7 @@ function make() {
     leftEl.appendChild(pic(node.left));
     leftEl.innerHTML += "<br>";
     const leftTxt = document.createElement("span");
-    leftTxt.innerHTML = node.left.ench("<br>");
+    leftTxt.innerHTML = node.left.ench.join("<br>");
     leftEl.appendChild(leftTxt);
     row.appendChild(leftEl);
 
