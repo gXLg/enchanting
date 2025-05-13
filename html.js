@@ -2,87 +2,87 @@ const enchantments = [
   {
     "name": "Protection",
     "on": ["helmet", "chestplate", "leggings", "boots"],
-    "max": 4, "book": 1, "item": 1
+    "max": 4, "book": 1
   },
   {
     "name": "Fire Protection",
     "on": ["helmet", "chestplate", "leggings", "boots"],
-    "max": 4, "book": 1, "item": 2
+    "max": 4, "book": 1
   },
   {
     "name": "Feather Falling",
     "on": ["boots"],
-    "max": 4, "book": 1, "item": 2
+    "max": 4, "book": 1
   },
   {
     "name": "Blast Protection",
     "on": ["helmet", "chestplate", "leggings", "boots"],
-    "max": 4, "book": 2, "item": 4
+    "max": 4, "book": 2
   },
   {
     "name": "Projectile Protection",
     "on": ["helmet", "chestplate", "leggings", "boots"],
-    "max": 4, "book": 1, "item": 2
+    "max": 4, "book": 1
   },
   {
     "name": "Thorns",
     "on": ["helmet", "chestplate", "leggings", "boots"],
-    "max": 3, "book": 4, "item": 8
+    "max": 3, "book": 4
   },
   {
     "name": "Respiration",
     "on": ["helmet"],
-    "max": 3, "book": 2, "item": 4
+    "max": 3, "book": 2
   },
   {
     "name": "Depth Strider",
     "on": ["boots"],
-    "max": 3, "book": 2, "item": 4
+    "max": 3, "book": 2
   },
   {
     "name": "Aqua Affinity",
     "on": ["helmet"],
-    "max": 1, "book": 2, "item": 4
+    "max": 1, "book": 2
   },
   {
     "name": "Sharpness",
     "on": ["sword", "axe"],
-    "max": 5, "book": 1, "item": 1
+    "max": 5, "book": 1
   },
   {
     "name": "Smite",
     "on": ["sword", "axe"],
-    "max": 5, "book": 1, "item": 2
+    "max": 5, "book": 1
   },
   {
     "name": "Bane of Arthropods",
     "on": ["sword", "axe"],
-    "max": 5, "book": 1, "item": 2
+    "max": 5, "book": 1
   },
   {
     "name": "Knockback",
     "on": ["sword"],
-    "max": 2, "book": 1, "item": 2
+    "max": 2, "book": 1
   },
   {
     "name": "Fire Aspect",
     "on": ["sword"],
-    "max": 2, "book": 2, "item": 4
+    "max": 2, "book": 2
   },
   {
     "name": "Looting",
     "on": ["sword"],
-    "max": 3, "book": 2, "item": 4
+    "max": 3, "book": 2
   },
   {
     "name": "Efficiency",
     "on": ["axe", "shovel", "hoe", "pickaxe", "shears"],
-    "max": 5, "book": 1, "item": 1
+    "max": 5, "book": 1
   },
   {
     "name": "Silk Touch",
     "on": ["axe", "shovel", "hoe", "pickaxe"],
-    "max": 1, "book": 4, "item": 8
+    "max": 1, "book": 4
   },
   {
     "name": "Unbreaking",
@@ -91,47 +91,47 @@ const enchantments = [
            "helmet", "chestplate", "leggings", "boots",
            "bow", "crossbow", "trident", "shield",
            "elytra", "rod"],
-    "max": 3, "book": 1, "item": 2
+    "max": 3, "book": 1
   },
   {
     "name": "Fortune",
     "on": ["axe", "shovel", "hoe", "pickaxe"],
-    "max": 3, "book": 2, "item": 4
+    "max": 3, "book": 2
   },
   {
     "name": "Power",
     "on": ["bow"],
-    "max": 5, "book": 1, "item": 1
+    "max": 5, "book": 1
   },
   {
     "name": "Punch",
     "on": ["bow"],
-    "max": 2, "book": 2, "item": 4
+    "max": 2, "book": 2
   },
   {
     "name": "Flame",
     "on": ["bow"],
-    "max": 1, "book": 2, "item": 4
+    "max": 1, "book": 2
   },
   {
     "name": "Infinity",
     "on": ["bow"],
-    "max": 1, "book": 4, "item": 8
+    "max": 1, "book": 4
   },
   {
     "name": "Luck of the Sea",
     "on": ["rod"],
-    "max": 3, "book": 2, "item": 4
+    "max": 3, "book": 2
   },
   {
     "name": "Lure",
     "on": ["rod"],
-    "max": 3, "book": 2, "item": 4
+    "max": 3, "book": 2
   },
   {
     "name": "Frost Walker",
     "on": ["boots"],
-    "max": 2, "book": 2, "item": 4
+    "max": 2, "book": 2
   },
   {
     "name": "Mending",
@@ -140,12 +140,12 @@ const enchantments = [
            "helmet", "chestplate", "leggings", "boots",
            "bow", "crossbow", "trident", "shield",
            "elytra", "rod"],
-    "max": 1, "book": 2, "item": 4
+    "max": 1, "book": 2
   },
   {
     "name": "Curse of Binding",
     "on": ["helmet", "chestplate", "leggings", "boots", "elytra"],
-    "max": 1, "book": 4, "item": 8
+    "max": 1, "book": 4
   },
   {
     "name": "Curse of Vanishing",
@@ -154,64 +154,63 @@ const enchantments = [
            "helmet", "chestplate", "leggings", "boots",
            "bow", "crossbow", "trident", "shield",
            "elytra", "rod"],
-    "max": 1, "book": 4, "item": 8
+    "max": 1, "book": 4
   },
   {
     "name": "Impaling",
     "on": ["trident"],
-    "max": 5, "book": 2, "item": 4
+    "max": 5, "book": 2
   },
   {
     "name": "Riptide",
     "on": ["trident"],
-    "max": 3, "book": 2, "item": 4
+    "max": 3, "book": 2
   },
   {
     "name": "Loyalty",
     "on": ["trident"],
-    "max": 3, "book": 1, "item": 1
+    "max": 3, "book": 1
   },
   {
     "name": "Channeling",
     "on": ["trident"],
-    "max": 1, "book": 4, "item": 8
+    "max": 1, "book": 4
   },
   {
     "name": "Multishot",
     "on": ["crossbow"],
-    "max": 1, "book": 2, "item": 4
+    "max": 1, "book": 2
   },
   {
     "name": "Piercing",
     "on": ["crossbow"],
-    "max": 4, "book": 1, "item": 1
+    "max": 4, "book": 1
   },
   {
     "name": "Quick Charge",
     "on": ["crossbow"],
-    "max": 3, "book": 1, "item": 2
+    "max": 3, "book": 1
   },
   {
     "name": "Soul Speed",
     "on": ["boots"],
-    "max": 3, "book": 4, "item": 8
+    "max": 3, "book": 4
   },
   {
     "name": "Sweeping Edge",
     "on": ["sword"],
-    "max": 3, "book": 2, "item": 4
+    "max": 3, "book": 2
   },
   {
     "name": "Swift Sneak",
     "on": ["leggings"],
-    "max": 3, "book": 4, "item": 8
+    "max": 3, "book": 4
   }
 ];
 const groups = [
   ["Sharpness", "Smite", "Bane of Arthropods"],
   ["Fortune", "Silk Touch"],
-  ["Protection", "Fire Protection",
-   "Blast Protection", "Projectile Protection"],
+  ["Protection", "Fire Protection", "Blast Protection", "Projectile Protection"],
   ["Depth Strider", "Frost Walker"],
   ["Infinity", "Mending"],
   ["Multishot", "Piercing"],
@@ -230,155 +229,10 @@ function roman(number){
   return dict[number];
 }
 
-const structures = {
-  1: {
-    "data": [
-         [null],
-      [null,  null]
-    ],
-    "index": [[1, 1]],
-    "weight": [1],
-    "penalty": 0
-  },
-  2: {
-    "data": [
-                [null],
-          [null,       null],
-      [null,  null]
-    ],
-    "index": [[2, 1], [1, 1]],
-    "weight": [1, 1],
-    "penalty": 1
-  },
-  3: {
-    "data": [
-                      [null],
-               [null,           null],
-         [null,      null],
-      [null,  null]
-    ],
-    "index": [[3, 1], [2, 1], [1, 1]],
-    "weight": [1, 1, 1],
-    "penalty": 4
-  },
-  4: {
-    "data": [
-                      [null],
-               [null,           null],
-         [null,      null,    null,   null],
-      [null,  null]
-    ],
-    "index": [[2, 3], [3, 1], [2, 1], [2, 2]],
-    "weight": [2, 1, 1, 1],
-    "penalty": 5, "when": 6, "then": {
-      "data": [
-                               [null],
-                       [null,           null],
-                 [null,      null],
-            [null,  null],
-        [null,  null]
-      ],
-      "index": [[4, 1], [3, 1], [2, 1], [1, 1]],
-      "weight": [1, 1, 1, 1],
-      "penalty": 11
-    }
-  },
-  5: {
-    "data": [
-                      [null],
-               [null,              null],
-         [null,       null,      null,   null],
-      [null,  null,  null, null]
-    ],
-    "index": [[3, 3], [2, 3], [3, 1], [3, 2], [2, 2]],
-    "weight": [2, 2, 1, 1, 1],
-    "penalty": 6, "when": 6, "then": {
-      "data": [
-                               [null],
-                       [null,           null],
-                 [null,      null,   null,  null],
-            [null,  null],
-        [null,  null]
-      ],
-      "index": [[2, 3], [4, 1], [3, 1], [2, 1], [2, 2]],
-      "weight": [2, 1, 1, 1, 1],
-      "penalty": 12
-    }
-  },
-  6: {
-    "data": [
-                            [null],
-               [null,                      null],
-         [null,       null,           null,     null],
-      [null,  null,  null, null,   null, null]
-    ],
-    "index": [[3, 5], [3, 3], [2, 3], [3, 1], [3, 2], [3, 4]],
-    "weight": [2, 2, 2, 1, 1, 1],
-    "penalty": 9, "when": 4, "then": {
-      "data": [
-                               [null],
-                       [null,             null],
-                 [null,       null,     null,  null],
-            [null,  null,  null, null],
-        [null,  null]
-      ],
-      "index": [[3, 3], [2, 3], [4, 1], [3, 1], [2, 2], [3, 2]],
-      "weight": [2, 2, 1, 1, 1, 1],
-      "penalty": 13
-    }
-  },
-  7: {
-    "data": [
-                              [null],
-               [null,                       null],
-         [null,       null,           null,       null],
-      [null,  null,  null, null,   null, null,  null, null]
-    ],
-    "index": [[3, 7], [3, 5], [3, 6], [3, 3], [3, 1], [3, 2], [3, 4]],
-    "weight": [3, 2, 2, 2, 1, 1, 1],
-    "penalty": 10, "when": 4, "then": {
-      "data": [
-                                   [null],
-                       [null,                 null],
-                  [null,        null,       null,  null],
-            [null,     null,   null, null],
-        [null,  null, null, null]
-      ],
-      "index": [[4, 3], [3, 3], [2, 3], [4, 1], [4, 2], [2, 2], [3, 2]],
-      "weight": [2, 2, 2, 1, 1, 1, 1],
-      "penalty": 14
-    }
-  },
-  8: {
-    "data": [
-                                   [null],
-                     [null,                    null],
-                [null,        null,         null,    null],
-          [null,     null,   null, null,  null, null],
-      [null,  null, null, null]
-    ],
-    "index": [[3, 5], [4, 3], [3, 3], [2, 3], [4, 1], [4, 2], [3, 4], [3, 2]],
-    "weight": [2, 2, 2, 2, 1, 1, 1, 1],
-    "penalty": 17
-  },
-  9: {
-    "data": [
-                                        [null],
-                           [null,                        null],
-                [null,                 null,         null,    null],
-          [null,     null,         null,   null,  null, null],
-      [null,  null, null, null, null, null]
-    ],
-    "index": [[4, 5], [3, 5], [4, 3], [3, 3], [2, 3], [4, 1], [4, 2], [3, 4], [4, 4]],
-    "weight": [2, 2, 2, 2, 2, 1, 1, 1, 1],
-    "penalty": 18
-  }
-};
-
 let logs;
-function msg(error, ...entries){
+function msg(error, ...entries) {
   let tx = "";
-  if(error) tx += "<span class=r>";
+  if (error) tx += "<span class=r>";
   tx += entries.map(e => {
     if((typeof e === "object") && (e !== null))
       return JSON.stringify(e);
@@ -390,12 +244,13 @@ function msg(error, ...entries){
   logs.innerHTML += tx;
   logs.scrollTop = logs.scrollHeight;
 }
-function log(...entries){
+function log(...entries) {
   msg(false, ...entries);
 }
+
 let errored = false;
-function error(...entries){
-  if(!errored){
+function error(...entries) {
+  if(!errored) {
     alert("An error occured, check the logs");
     errored = true;
   }
@@ -408,7 +263,6 @@ let result;
 let magic = { };
 
 window.onload = () => {
-
   const button = document.getElementById("makeBtn");
   button.onclick = () => { make(item, magic); };
   logs = document.getElementById("log");
@@ -426,8 +280,7 @@ window.onload = () => {
   change();
 }
 
-function change(){
-
+function change() {
   result.innerHTML = "";
 
   item = select.value;
@@ -436,14 +289,14 @@ function change(){
   const table = document.getElementById("ench");
   table.innerHTML = "";
 
-  for(let enchantment of enchantments){
+  for (let enchantment of enchantments) {
     if(!enchantment.on.includes(item)) continue;
     const row = document.createElement("tr");
     const text = document.createElement("td");
     text.innerHTML = enchantment.name;
     row.appendChild(text);
     const butt = document.createElement("td");
-    for(let i = 1; i <= enchantment.max; i ++){
+    for (let i = 1; i <= enchantment.max; i ++) {
       const button = document.createElement("input");
       button.type = "button";
       button.value = roman(i);
@@ -465,38 +318,114 @@ function change(){
   }
 }
 
-function click(name, i, max){
-
+function click(name, i, max) {
   const id = name.split(" ").join("_");
 
-  for(let j = 1; j <= max; j ++){
+  for (let j = 1; j <= max; j ++) {
     const el = document.getElementById(id + j);
     el.classList.remove("selected");
   }
 
-  if(i){
+  if (i) {
     const el = document.getElementById(id + i);
     el.classList.add("selected");
     magic[name] = i;
-
   } else {
     delete magic[name];
   }
 }
 
 
-function make(){
+class Node {
+  constructor(left, right, leaf) {
+    this.left = left;
+    this.right = right;
+    this.leaf = leaf;
+    this.item = null;
+    this.ench = [];
+  }
+}
 
+function gen_shapes(n) {
+  if (n == 1) {
+    return [null];
+  }
+  const shapes = [];
+  for (let l = 0; l < n; l++) {
+    const r = n - l;
+    for (const left of gen_shapes(l)) {
+      for (const right of gen_shapes(r)) {
+        shapes.push([left, right]);
+      }
+    }
+  }
+}
+
+function build_tree(shape) {
+  if (shape == null) {
+    return new Node(null, null, true);
+  }
+  return new Node(build_tree(shape[0]), build_tree(shape[1]), false)
+}
+
+function collect_leafs(node, count, factors) {
+  count = count ?? 0;
+  factors = factors ?? [];
+  if (node.leaf) {
+    factors.push(count);
+  } else {
+    collect_leafs(node.left, count, factors)
+    collect_leafs(node.right, count + 1, factors)
+  }
+  return factors;
+}
+
+function compute_internal(node) {
+  if (node.leaf) return [0, 0];
+  const [dl, cl] = compute_internal(node.left);
+  const [dr, cr] = compute_internal(node.right);
+  return [Math.max(dl, dr) + 1, cl + cr + (2 ** dl - 1) + (2 ** dr - 1)]
+}
+
+function total_cost(shape, numbers) {
+  const tree = build_tree(shape);
+  const factors = collect_leafs(tree);
+  factors.sort();
+  const num = [...numbers];
+  num.sort();
+  let leaf_cost = 0;
+  for (let i = 0; i < numbers.length; i++) {
+    leaf_cost += factors[i] * num[numbers.length - i - 1];
+  }
+  const [_, internal] = compute_internal(tree);
+  return leaf_cost + internal
+}
+
+function find_tree(numbers) {
+  const N = numbers.length;
+  let best_cost = Infinity;
+  let best_shape = null;
+  for (const shape of generate_shapes(N)) {
+    const cost = total_cost(shape, numbers);
+    if (cost < best_cost) {
+      best_cost = cost;
+      best_shape = shape;
+    }
+  }
+  return [best_cost, build_tree(best_shape)]
+}
+
+function make() {
   logs.innerHTML = "";
   result.innerHTML = "";
   errored = false;
 
-  if(Object.keys(magic).length == 0) return;
+  if (Object.keys(magic).length == 0) return;
 
   const start = new Date();
   log("Searching for enchantments...");
   const enchants = [];
-  for(let enchant in magic){
+  for (let enchant in magic) {
     const enchantment = enchantments.filter(
       en => en.name == enchant
     )[0];
@@ -513,7 +442,7 @@ function make(){
       return;
     }
 
-    if(!enchantment.on.includes(item)){
+    if (!enchantment.on.includes(item)) {
       error("Not available for this item");
       return;
     }
@@ -526,112 +455,95 @@ function make(){
   }
 
   let conflict = false;
-  for(let group of groups){
+  for (let group of groups) {
     const filter = Object.keys(magic).filter(
       en => group.includes(en)
     );
     const count = filter.length;
-    if(count >= 2){
+    if (count >= 2) {
       error(
         "Enchantments conflict found:", filter.join(", ")
       );
       conflict = true;
     }
   }
-  if(conflict) return;
+  if (conflict) return;
   log("No conflicts found");
 
-  log("Searching for optimal binary tree...");
-  let data = structures[enchants.length];
-  log("Found tree with weights", data.weight.join(" "));
-  if("when" in data){
-    log("Found alternative")
-    if(
-      Math.min(...enchants.map(e => e.value)) > data.when
-    ){
-      data = data.then;
-      log(
-        "Alternative applied, new weights:",
-        data.weight.join(" ")
-      );
-    } else {
-      log("Alternative not matching");
-    }
-  }
-  const tree = data.data;
   const sorted = enchants.sort((a, b) => a.value - b.value);
-
   log("Working with enchant costs", enchants.map(e => e.value).join(" "));
 
-  log("Counting using collected data...");
-  let cost = 0;
-  tree[tree.length - 1][0] = [item, [], 0, 0];
-  for(let i in sorted){
-    const index = data.index[i];
-    tree[index[0]][index[1]] = [
-      "book", [sorted[i].e], 0, sorted[i].value
-    ];
-    cost += data.weight[i] * sorted[i].value;
-  }
-  log("Enchanting cost:", cost);
-  log("Prior work penalty:", data.penalty);
-  log("Total cost:", cost + data.penalty);
+  log("Searching for optimal binary tree...");
+  const [tcost, tree] = find_tree([...sorted.map(e => e.value), 100]);
 
+  log("Total cost: ", tcost);
   log("Generating output...");
-  function printTree(level, index){
-    if(
-      ((level + 1) in tree) &&
-      ((index * 2) in tree[level + 1])
-    ){
-      const left = printTree(level + 1, index * 2);
-      const right = printTree(level + 1, index * 2 + 1);
-      const en = [...left[1], ...right[1]];
-      const cost = repairCost(left[2]) + repairCost(right[2])
-                 + right[3];
-      const anvilUses = Math.max(left[2], right[2]) + 1;
-      const value = left[3] + right[3];
-      const middle = [left[0], en, anvilUses, value];
 
-      const row = document.createElement("tr");
-
-      const leftEl = document.createElement("td");
-      const leftImg = document.createElement("img");
-      leftImg.src = "images/" + left[0] + ".gif";
-      leftEl.appendChild(leftImg);
-      leftEl.innerHTML += "<br>";
-      const leftTxt = document.createElement("span");
-      leftTxt.innerHTML = left[1].join("<br>");
-      leftEl.appendChild(leftTxt);
-      row.appendChild(leftEl);
-
-      const rightEl = document.createElement("td");
-      const rightImg = document.createElement("img");
-      rightImg.src = "images/" + right[0] + ".gif";
-      rightEl.appendChild(rightImg);
-      rightEl.innerHTML += "<br>";
-      const rightTxt = document.createElement("span");
-      rightTxt.innerHTML = right[1].join("<br>");
-      rightEl.appendChild(rightTxt);
-      row.appendChild(rightEl);
-
-      const xpEl = document.createElement("td");
-      const xpImg = document.createElement("img");
-      xpImg.src = "images/xp.gif";
-      xpEl.appendChild(xpImg);
-      xpEl.innerHTML += "<br>";
-      const xpTxt = document.createElement("span");
-      xpTxt.innerHTML = cost + " levels";
-      xpEl.appendChild(xpTxt);
-      row.appendChild(xpEl);
-
-      result.appendChild(row);
-
-      return middle;
+  const en = [...sorted, 100];
+  function fill_tree(node) {
+    if (node.leaf) {
+      const e = en.shift();
+      if (e == 100) {
+        node.item = item;
+      } else {
+        node.ench.push(e);
+      }
     } else {
-      return tree[level][index];
+      const [_, re] = fill_tree(node.right);
+      const [li, le] = fill_tree(node.left);
+      node.item = li;
+      node.ench.push(...le, ...re);
     }
+    return [node.item, node.ench];
   }
-  const last = printTree(0, 0);
+  fill_tree(tree);
+
+  function print_tree(node) {
+    if (node.leaf) {
+      return 0;
+    }
+    const lc = print_tree(node.left);
+    const rc = print_tree(node.right);
+
+    const cost = repairCost(lc) + repairCost(rc) + node.right.ench.reduce((a, b) => a.value + b.value, 0);
+    
+    const row = document.createElement("tr");
+
+    const leftEl = document.createElement("td");
+    const leftImg = document.createElement("img");
+    leftImg.src = "images/" + node.left.item + ".gif";
+    leftEl.appendChild(leftImg);
+    leftEl.innerHTML += "<br>";
+    const leftTxt = document.createElement("span");
+    leftTxt.innerHTML = node.left.ench("<br>");
+    leftEl.appendChild(leftTxt);
+    row.appendChild(leftEl);
+
+    const rightEl = document.createElement("td");
+    const rightImg = document.createElement("img");
+    rightImg.src = "images/" + node.right.item + ".gif";
+    rightEl.appendChild(rightImg);
+    rightEl.innerHTML += "<br>";
+    const rightTxt = document.createElement("span");
+    rightTxt.innerHTML = node.right.ench.join("<br>");
+    rightEl.appendChild(rightTxt);
+    row.appendChild(rightEl);
+
+    const xpEl = document.createElement("td");
+    const xpImg = document.createElement("img");
+    xpImg.src = "images/xp.gif";
+    xpEl.appendChild(xpImg);
+    xpEl.innerHTML += "<br>";
+    const xpTxt = document.createElement("span");
+    xpTxt.innerHTML = cost + " levels";
+    xpEl.appendChild(xpTxt);
+    row.appendChild(xpEl);
+
+    result.appendChild(row);
+    
+    return Math.max(lc, rc) + 1;
+  }
+  print_tree(tree);
 
   const row = document.createElement("tr");
 
@@ -643,11 +555,11 @@ function make(){
 
   const rightEl = document.createElement("td");
   const rightImg = document.createElement("img");
-  rightImg.src = "images/" + last[0] + ".gif";
+  rightImg.src = "images/" + tree.item + ".gif";
   rightEl.appendChild(rightImg);
   rightEl.innerHTML += "<br>";
   const rightTxt = document.createElement("span");
-  rightTxt.innerHTML = last[1].join("<br>");
+  rightTxt.innerHTML = tree.ench.join("<br>");
   rightEl.appendChild(rightTxt);
   row.appendChild(rightEl);
 
@@ -657,7 +569,7 @@ function make(){
   xpEl.appendChild(xpImg);
   xpEl.innerHTML += "<br>";
   const xpTxt = document.createElement("span");
-  xpTxt.innerHTML = cost + data.penalty + " levels";
+  xpTxt.innerHTML = tcost + " levels";
   xpEl.appendChild(xpTxt);
   row.appendChild(xpEl);
 
