@@ -527,9 +527,7 @@ function make() {
     }
     const lc = print_tree(node.left);
     const rc = print_tree(node.right);
-    log(node, lc, "#", rc);
-
-    const cost = repairCost(lc) + repairCost(rc) + node.right.ench.reduce((a, b) => a.value + b.value);
+    const cost = repairCost(lc) + repairCost(rc) + node.right.ench.reduce((a, b) => a + b.value, 0);
     
     const row = document.createElement("tr");
 
