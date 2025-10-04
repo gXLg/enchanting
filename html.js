@@ -223,7 +223,7 @@ const enchantments = [
   }
 ];
 const groups = [
-  ["Sharpness", "Smite", "Bane of Arthropods"],
+  ["Sharpness", "Smite", "Bane of Arthropods", "Breach", "Density"],
   ["Fortune", "Silk Touch"],
   ["Protection", "Fire Protection", "Blast Protection", "Projectile Protection"],
   ["Depth Strider", "Frost Walker"],
